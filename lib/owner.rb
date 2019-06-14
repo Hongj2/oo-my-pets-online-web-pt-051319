@@ -6,9 +6,7 @@ class Owner
    @species = species
    @@all << self
    @pets = {fishes: [], cats: [], dogs: []}
-   
  end
- 
  def self.all 
    @@all 
  end
@@ -18,14 +16,12 @@ class Owner
  def self.reset_all
    @@all.clear
  end
- 
  def say_species 
    "I am a #{species}."
  end
- 
  def buy_cat(name)
    pets[:cats] << Cat.new(name)
-   
+  
  end
    def play_with_cats 
       pets[:cats].map {|cat| cat.mood = "happy"}
